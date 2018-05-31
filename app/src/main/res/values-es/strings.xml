@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MemeSounds</string>
+    <string name="Menu_options">Opciones</string>
+    <string name="Menu_start">Empezar</string>
+    <string name="Memes">Memes Gratis</string>
+    <string name="Back">Atras</string>
+    <string name="Menu_memes">Memes</string>
+    <string name="Next">Siguiente</string>
+    <string name="Options">Opciones</string>
+    <string name="check_sound">Sonido</string>
+    <string name="check_vibrate">Vibracion</string>
+    <string name="b1text">Boton 1</string>
+    <string name="Random">Aleatorio</string>
+    <string name="RandomTitle">Memes Aleatorios</string>
+</resources>

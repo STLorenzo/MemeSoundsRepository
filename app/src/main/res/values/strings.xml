@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MemeSounds</string>
+    <string name="Menu_start">Start</string>
+    <string name="Menu_options">Options</string>
+    <string name="Menu_memes">Memes</string>
+    <string name="check_sound">Sound</string>
+    <string name="check_vibrate">Vibrate</string>
+    <string name="Memes">Free Memes</string>
+    <string name="b1text">Button 1</string>
+    <string name="Options">Options</string>
+    <string name="Back">Back</string>
+    <string name="Next">Next</string>
+    <string name="Random">Random</string>
+    <string name="RandomTitle">Random Memes 4 U</string>
+
+</resources>
