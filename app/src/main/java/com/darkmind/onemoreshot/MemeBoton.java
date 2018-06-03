@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class MemeBoton  extends android.support.v7.widget.AppCompatButton{
 
-    private int background;
+
     private MediaPlayer mp3;
     private int id;
     private static int MaxSongs = 100;
@@ -42,8 +42,7 @@ public class MemeBoton  extends android.support.v7.widget.AppCompatButton{
     }
 
     public void setBack(int background) {
-        this.background = background;
-        this.setBackgroundResource(this.background);
+        this.setBackgroundResource(background);
         this.invalidate();
     }
 
@@ -81,8 +80,7 @@ public class MemeBoton  extends android.support.v7.widget.AppCompatButton{
     }
 
     public boolean isPlaying(){
-        if (this.mp3 == null) return false;
-        return this.mp3.isPlaying();
+        return this.mp3 != null && this.mp3.isPlaying();
     }
 
     public MediaPlayer crearSonidos(Context context,int id) {
@@ -368,10 +366,6 @@ public class MemeBoton  extends android.support.v7.widget.AppCompatButton{
         }
 
         return R.drawable.pepegood;
-    }
-
-    public void setImagen(){
-        setBack(crearImagenes(id));
     }
 
     public void setImagen(int id, int evento){

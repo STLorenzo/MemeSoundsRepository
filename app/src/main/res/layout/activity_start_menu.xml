@@ -1,65 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient2"
     android:weightSum="1">
 
     <ImageView
         android:id="@+id/MenuImage"
         android:layout_width="match_parent"
-        android:layout_height="325dp"
-        android:layout_weight="0.21"
+        android:layout_height="174dp"
         android:scaleType="fitXY"
-        android:src="@drawable/menuhalloween" />
+        android:src="@drawable/menuhalloween"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="274dp"
-        android:layout_marginBottom="287dp"
+        android:layout_height="349dp"
+        android:layout_margin="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/gradient2"
-        android:gravity="center_vertical|center_horizontal"
+        android:gravity="center_vertical"
         android:orientation="vertical"
-        android:paddingBottom="40dp">
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MenuImage"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@id/espacio"
-            android:layout_centerInParent="true"
-            android:gravity="center_horizontal">
+            android:layout_above="@+id/espacio"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/MenuMemesBtn"
-                android:textSize="15dp"
                 style="@style/Button.Background.text.dinamic"
                 android:layout_gravity="center"
                 android:background="@drawable/gradient"
-                android:text="@string/Menu_memes" />
+                android:text="@string/Menu_memes"
+                android:textSize="15dp" />
 
             <Button
                 android:id="@+id/RandomBtn"
-                android:textSize="15dp"
                 style="@style/Button.Background.text.dinamic"
                 android:layout_gravity="center"
                 android:background="@drawable/gradient"
-                android:text="@string/Random" />
+                android:text="@string/Random"
+                android:textSize="15dp" />
 
             <Button
                 android:id="@+id/HalloweenBtn"
                 style="@style/Button.Background.text.dinamic"
                 android:layout_gravity="center"
                 android:background="@drawable/gradienthalloween"
-                android:text="Spooky"
+                android:text="Events"
                 android:textSize="13dp" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:id="@+id/espacio"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_above="@id/adView">
+            android:layout_above="@id/adView"
+            android:orientation="vertical">
 
 
         </LinearLayout>
@@ -69,9 +83,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="false"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="0dp"
             ads:adSize="BANNER"
             ads:adUnitId="ca-app-pub-5144756144150507/7608346494">
 
@@ -79,4 +93,4 @@
 
     </RelativeLayout>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
