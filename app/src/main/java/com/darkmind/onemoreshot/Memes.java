@@ -98,6 +98,17 @@ public class Memes extends AppCompatActivity {
             texto.setText("FREE SPOOKY");
         }
 
+        if(evento == StartMenu.GOTY){
+            RelativeLayout stopRelative = findViewById(R.id.stopLayout);
+            TextView texto = findViewById(R.id.titleM);
+
+            stopRelative.setBackgroundResource(R.drawable.gradientgotymenu);
+            r.setBackgroundResource(R.drawable.gradientgotymenu);
+
+            texto.setText("GOTY MEMES");
+            texto.setTextColor(Color.BLACK);
+        }
+
         // publicidad:
 
         adG = new InterstitialAd(getApplicationContext());

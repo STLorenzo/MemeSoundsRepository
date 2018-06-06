@@ -17,6 +17,7 @@ public class StartMenu extends AppCompatActivity {
 
     public static final int NORMAL = 1;
     public static final int HALLOWEEN = 2;
+    public static final int GOTY = 3;
 
 
     @Override
@@ -25,7 +26,7 @@ public class StartMenu extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_start_menu);
 
-        Button btnMemes = (Button) findViewById(R.id.MenuMemesBtn);
+        Button btnMemes = findViewById(R.id.MenuMemesBtn);
         btnMemes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +34,7 @@ public class StartMenu extends AppCompatActivity {
             }
         });
 
-        Button btnRandom = (Button) findViewById(R.id.RandomBtn);
+        Button btnRandom = findViewById(R.id.RandomBtn);
         btnRandom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +42,7 @@ public class StartMenu extends AppCompatActivity {
             }
         });
 
-        Button btnHalloween = (Button) findViewById(R.id.HalloweenBtn);
+        Button btnHalloween = findViewById(R.id.HalloweenBtn);
         btnHalloween.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,9 +50,17 @@ public class StartMenu extends AppCompatActivity {
             }
         });
 
+        Button btnGoty = findViewById(R.id.GotyBtn);
+        btnGoty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startGoty();
+            }
+        });
+
         //publicidad
 
-        AdView ad = (AdView) findViewById(R.id.adView);
+        AdView ad = findViewById(R.id.adView);
 
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
@@ -76,6 +85,14 @@ public class StartMenu extends AppCompatActivity {
         Intent i = new Intent(this, Memes.class);
         Bundle b = new Bundle();
         b.putInt("id", HALLOWEEN);
+        i.putExtras(b);
+        startActivity(i);
+    }
+
+    private void startGoty(){
+        Intent i = new Intent(this, Memes.class);
+        Bundle b = new Bundle();
+        b.putInt("id", GOTY);
         i.putExtras(b);
         startActivity(i);
     }

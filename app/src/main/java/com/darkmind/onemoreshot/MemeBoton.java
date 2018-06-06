@@ -363,6 +363,8 @@ public class MemeBoton  extends android.support.v7.widget.AppCompatButton{
                 case 18: return R.drawable.h_verruct;
                 case 19: return R.drawable.h_wolf;
             }
+        }else if(evento == StartMenu.GOTY){
+
         }
 
         return R.drawable.pepegood;

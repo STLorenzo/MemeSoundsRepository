@@ -22,12 +22,11 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="349dp"
+        android:layout_height="0dp"
         android:layout_margin="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/gradient2"
-        android:gravity="center_vertical"
         android:orientation="vertical"
         android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,32 +39,61 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/espacio"
+            android:layout_above="@+id/Hallo-goty"
             android:gravity="center">
 
             <Button
                 android:id="@+id/MenuMemesBtn"
                 style="@style/Button.Background.text.dinamic"
+                android:layout_width="120dp"
+                android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:background="@drawable/gradient"
                 android:text="@string/Menu_memes"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/RandomBtn"
                 style="@style/Button.Background.text.dinamic"
+                android:layout_width="120dp"
+                android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:background="@drawable/gradient"
                 android:text="@string/Random"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Hallo-goty"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/espacio"
+            android:gravity="center">
+
 
             <Button
                 android:id="@+id/HalloweenBtn"
                 style="@style/Button.Background.text.dinamic"
+                android:layout_width="120dp"
+                android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:background="@drawable/gradienthalloween"
-                android:text="Events"
-                android:textSize="13dp" />
+                android:text="Halloween"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/GotyBtn"
+                style="@style/Button.Background.text.dinamic"
+                android:layout_width="120dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="@drawable/gradientgoty"
+                android:text="GOTY"
+                android:textSize="12sp" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -83,8 +111,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="false"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="false"
             android:layout_alignParentStart="true"
             ads:adSize="BANNER"
             ads:adUnitId="ca-app-pub-5144756144150507/7608346494">
