@@ -13,4 +13,8 @@
     <string name="b1text">Boton 1</string>
     <string name="Random">Aleatorio</string>
     <string name="RandomTitle">Memes Aleatorios</string>
+    <string name="Halloween">Halloween</string>
+    <string name="GOTY">GOTY</string>
+    <string name="free_spooky">MIEDO GRATIS</string>
+    <string name="goty_memes">MEMES GOTY</string>
 </resources>

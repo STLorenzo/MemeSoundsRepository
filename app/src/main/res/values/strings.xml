@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MemeSounds GOTY</string>
     <string name="Menu_start">Start</string>
@@ -12,5 +13,8 @@
     <string name="Next">Next</string>
     <string name="Random">Random</string>
     <string name="RandomTitle">Random Memes 4 U</string>
-
+    <string name="Halloween">Halloween</string>
+    <string name="GOTY">GOTY</string>
+    <string name="goty_memes">GOTY MEMES</string>
+    <string name="free_spooky">FREE SPOOKY</string>
 </resources>

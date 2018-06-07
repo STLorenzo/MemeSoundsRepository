@@ -71,7 +71,7 @@ public class Memes extends AppCompatActivity {
         setContentView(R.layout.activity_memes);
 
         //crear stop
-        Button stop = (Button) findViewById(R.id.stopBtn);
+        Button stop = findViewById(R.id.stopBtn);
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,8 +86,8 @@ public class Memes extends AppCompatActivity {
         });
 
         //obtener los layout
-        l1 = (LinearLayout) findViewById(R.id.memesLandscape);
-        r = (RelativeLayout) findViewById(R.id.MemeTitle);
+        l1 =  findViewById(R.id.memesLandscape);
+        r = findViewById(R.id.MemeTitle);
 
         if(evento == StartMenu.HALLOWEEN){
             RelativeLayout stopRelative = findViewById(R.id.stopLayout);
@@ -95,7 +95,7 @@ public class Memes extends AppCompatActivity {
 
             stopRelative.setBackgroundColor(Color.parseColor("#DD855C"));
             r.setBackgroundColor(Color.parseColor("#DD855C"));
-            texto.setText("FREE SPOOKY");
+            texto.setText(R.string.free_spooky);
         }
 
         if(evento == StartMenu.GOTY){
@@ -105,14 +105,14 @@ public class Memes extends AppCompatActivity {
             stopRelative.setBackgroundResource(R.drawable.gradientgotymenu);
             r.setBackgroundResource(R.drawable.gradientgotymenu);
 
-            texto.setText("GOTY MEMES");
+            texto.setText(R.string.goty_memes);
             texto.setTextColor(Color.BLACK);
         }
 
         // publicidad:
 
         adG = new InterstitialAd(getApplicationContext());
-        adG.setAdUnitId("ca-app-pub-5144756144150507/7908573285");
+        adG.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
         adGr = new AdRequest.Builder().build();
         adG.loadAd(adGr);
 
@@ -124,8 +124,8 @@ public class Memes extends AppCompatActivity {
 
     private void crearTablero(int screen){
         if(r == null || l1 == null ) return;
-        Button back = (Button) findViewById(R.id.backBtn);
-        Button next = (Button) findViewById(R.id.nextBtn);
+        Button back = findViewById(R.id.backBtn);
+        Button next = findViewById(R.id.nextBtn);
 
         this.pantalla = screen;
         MemeBoton.setMaxSongs(evento);
@@ -237,7 +237,7 @@ public class Memes extends AppCompatActivity {
 
                         //parte sonido del boton
                         if(activo != null){
-                            if(activo == ((MemeBoton)v)){
+                            if(activo == v){
                                     activo.stopMp3();
                                     activo.prepareMp3();
                                     activo.playMp3();
